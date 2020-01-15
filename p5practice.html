@@ -11,19 +11,32 @@
   </head>
   <body>
     <script>
+      var bimage;
       var w = window.innerWidth;
       var h = window.innerHeight;
+      
       function setup() {
         //this creates a canvas that is x and y
-        createCanvas(w, h);
-        
+        createCanvas(w, h, WEBGL);
+        bimage = loadImage("3.jpg")
       }
+      
       function draw() {
-        background("#FFDDBA");
+        clear();
+        background(bimage);
         //circle(mouseX, mouseY, 100)
-        rect(100, 100, mouseX, mouseY)
-        noStroke()
+        //rect(100, 100, mouseX, mouseY)
+        //rotate around the Y axis when I move my mouse horiontally. I will divide by 100 to decrease the mosue sensitivity
+        rotateY(mouseX/70);
+        //rotate around the X axis when I move my mouse vertically. I will divide by 100 to decrease the mosue sensitivity
+        rotateX(mouseY/70);
+        rect(10, 10, 100, 100);
+        fill("#FFDDBA")
+        rect(100, 100, 100, 100);
+        fill("#FFC352")
+        rect(50, 300, 100, 100);
         fill("#D3E8FF")
+        noStroke();
         
       }
 
