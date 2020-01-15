@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script>
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      function setup() {
+        //this creates a canvas that is x and y
+        createCanvas(w, h);
+        
+      }
+      function draw() {
+        background("#FFDDBA");
+        //circle(mouseX, mouseY, 100)
+        rect(100, 100, mouseX, mouseY)
+        noStroke()
+        fill("#D3E8FF")
+        
+      }
+
+    </script>
+  </body>
+</html>
